@@ -4,56 +4,157 @@
 <head>
     <link rel="icon" href="Green Logo.png" type="image/x-icon">
     <title>Registration Kazi Abdur Rahim </title>
+<style>
+        fieldset {
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: lightskyblue;
+
+        }
+
+        input {
+            width: 80%;
+            padding: 5px;
+            margin-top: 3px;
+            margin-bottom: 20px;
+            margin-left: 4%;
+
+        }
+
+        textarea {
+            margin-left: 4%;
+        }
+
+        select {
+            margin-left: 4%;
+        }
+
+        img {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            margin-left: 40%;
+            border-radius: 80px;
+        }
+
+        input[type=submit] {
+            margin-left: 35%;
+            border-radius: 80px;
+            background-color: green;
+            color: white;
+            width: 100px;
+        }
+
+        input[type=reset] {
+            margin-left: 35%;
+            border-radius: 80px;
+            background-color: red;
+            color: black;
+            width: 100px;
+        }
+
+        .visuallyhidden {
+           
+          
+            height: 1px;
+            margin-left: 19%;
+            margin-top: -2%;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        div input {
+            width: 20px;
+            margin-top: 5px;
+        }
+
+        legend {
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            background-color: aliceblue;
+
+        }
+
+        label {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        select {
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<boby>
-    <h1 align="center"> Registration Form</h1>
-    <form>
+
+<body oncopy="noCopy()" oncut="noCut()" onpaste="noPaste()">
+    <fieldset>
+        <legend>Student Registration Form</legend>
+        <form oncopy=" return false" oncut="return false" onpaste="return false" autocomplete=off>
+            
+            <label for="file"> <img src="images.jpg" height="100" width="100"><br><center>Add profile</center> </label><br>
+
+            <input type="file" id="file" name="profile" class="visuallyhidden" accept="image/jpeg" required>
 
 
-        <label for="A">Student Name:</label><input type="text" id="A" name="fname" size="20" placeholder="Enter your name" required><br><br>
-
-        <label for="B">Student ID: </label><input type="number" id="B" size="20" placeholder="Enter a number"
-            required><br><br>
-        <label for="C">Email: </label><input type="email" id="C" size="20" placeholder="Enter Your Email"
-            required><br><br>
-
-        <label for="D">Username: </label><input type="text" id="D" size="20" maxlength="15" placeholder="Enter UserName"
-            required>
-        <br><br>
-        <label for="E">Password: </label><input type="password" id="E" size="20" placeholder="Enter Password"
-            required><br><br>
-        <label for="F">Date of Birth: </label><input type="date" id="F" size="20" placeholder="Enter Date of Birth"
-            required><br>
-
-        Gender: <br>
-        <input type="radio" name="gender" value="M">Male<br>
-        <input type="radio" name="gender" value="F">Female<br>
-        Language: <br>
-        <input type="checkbox" name="language" value="M" checked>
-
-        Bengali<br>
-        <input type="checkbox" name="language" value="F">English<br>
-
-
-        Country: <br>
-        <select name="country" required>
-            <option>(Please select your Country)</option>
-            <option value="B">Bangladesh</option>
-            <option value="I">India</option>
-        </select><br><br>
-        <label for="G">Address:</label><br>
-        <textarea rows="5" cols="30" id="G" placeholder="Enter YourPresent Address"></textarea><br><br>
-
-        Attach your Documents:<br>
-        <input type="file" name="Documents" required ><br><br>
-
-        <input type="submit" value="Submit">
-        <input type="reset" value="Reset">
-        <button style="background-color: rgb(193, 203, 182); color: red;" type="button"> <a href="https://ra-him.github.io/com/">Free
+            <label for="A">Student Name:</label><br>
+            <input type="text" id="A" name="fname" onselectstart="return false" required placeholder="Enter your name"><br>
+            <label for="B">Student ID: </label><br>
+            <input type="number" id="B" size="20" required placeholder="Enter a number"><br>
+            <label for="C">Email: </label><br>
+            <input type="email" id="C" size="20" placeholder="Enter Your Email" required><br>
+            <label for="D">Username: </label><br>
+            <input type="text" id="D" size="20" maxlength="15" placeholder="Enter UserName" required> <br>
+            <label for="E">Password: </label><br>
+            <input type="password" id="E" size="20" required placeholder="Enter Password"><br>
+            <label for="F">Date of Birth: </label><br>
+            <input type="date" id="F" size="20" required placeholder="Enter Date of Birth"><br>
+            <div>
+                <label>Gender:</label> <br>
+                <input type="radio" name="gender" id="male" value="M" checked><label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="F"><label for="female">Female</label>
+                <input type="radio" name="gender" id="others" value="O"><label for="others">Others</label><br>
+                <label> Language:</label> <br>
+                <input type="checkbox" name="language" value="M" id="Bengali"><label for="Bengali">Bengali</label>
+                <input type="checkbox" name="language" value="F" id="English"><label for="English">English</label><br>
+            </div>
+            <label>Country:</label> <br>
+            <select name="country" required>
+                <option value="">Choice country</option>
+                <option value="B">Bangladesh</option>
+                <option value="I">India</option>
+            </select><br><br>
+            <label for="G">Address:</label><br>
+            <textarea rows="5" cols="30" id="G" required placeholder="Enter Your Present Address"></textarea><br><br>
+            <label>Attach your Documents:</label><br>
+            <input type="file" name="Documents" accept="application/pdf, image/jpeg" required><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </fieldset>
+    <center><button style="background-color: rgb(193, 203, 182); color: red;" type="button"> <a href="https://ra-him.github.io/com/">Free
                 visit</a></button>
         <a href="log.html">Already you have an account</a>
-
-    </form>
+    </center>
+    <marquee behavior="Scrolling" direction="left">Already you have an account point and free visit button both are under development.</marquee>
+    <script>
+        function noCopy() {
+            alert("Copying is not allowed.");
+            return false;
+        }
+        function noCut() {
+            alert("Cut is not allowed.");
+            return false;
+        }
+        function noPaste() {
+            alert("Paste is not allowed.");
+            return false;
+        } 
+    </script>
+     
 </boby>
 
 </html>
